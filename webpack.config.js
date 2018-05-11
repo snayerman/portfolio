@@ -2,7 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-	devtool: 'eval',
+	// devtool: 'eval',
+	devtool: 'source-map',
 	entry: [
 		'webpack-dev-server/client?http://localhost:3000',
 		'./src/index.jsx'
@@ -21,7 +22,24 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loaders: ["style-loader", "css-loader", "sass-loader"]
+				loader: "style-loader",
+				options: {
+					sourceMap: true
+				}
+			},
+			{
+				test: /\.scss$/,
+				loader: "css-loader",
+				options: {
+					sourceMap: true
+				}
+			},
+			{
+				test: /\.scss$/,
+				loader: "sass-loader",
+				options: {
+					sourceMap: true
+				}
 			},
 			{
 				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
