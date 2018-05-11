@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import App from './App.jsx';
 import configureStore from './store/configureStore';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -20,9 +20,9 @@ const store = configureStore();
 render(
 	<Provider store={store}>
 		<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-			<BrowserRouter>
+			<HashRouter>
 				<App />
-			</BrowserRouter>
+			</HashRouter>
 		</MuiThemeProvider>
 	</Provider>,
 	document.getElementById('react-root')
