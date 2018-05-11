@@ -5,7 +5,8 @@ var config = require('./webpack.config');
 let port = process.env.PORT || 3000;
 
 new WebpackDevServer(webpack(config), {
-    publicPath: config.output.publicPath
+    publicPath: config.output.publicPath,
+    historyApiFallback: true
   })
   .listen(port, '0.0.0.0', function (err, result) {
     if (err) {

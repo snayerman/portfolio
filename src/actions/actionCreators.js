@@ -1,6 +1,5 @@
-export function test(data, cb) {
-   console.log("test action creator");
+export function selectPageForTransition(from, to, cb) {
    return (dispatch, prevState) => {
-      dispatch({type: 'TEST'});
+      dispatch({type: 'SELECT_PAGE', from, to, cb})
    };
 }

@@ -11,13 +11,19 @@ import App from './App.jsx';
 import configureStore from './store/configureStore';
 import { BrowserRouter } from 'react-router-dom';
 
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 const store = configureStore();
 
 render(
-   <Provider store={store}>
-      <BrowserRouter>
-         <App />
-      </BrowserRouter>
-   </Provider>,
-  document.getElementById('react-root')
+	<Provider store={store}>
+		<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</MuiThemeProvider>
+	</Provider>,
+	document.getElementById('react-root')
 );

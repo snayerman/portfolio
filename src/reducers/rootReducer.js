@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import testReducer from './testReducer';
+import pagesReducer from './pagesReducer';
 
-const rootReducer = combineReducers({testReducer});
+const rootReducer = combineReducers({pages: pagesReducer});
 
 export default rootReducer;
