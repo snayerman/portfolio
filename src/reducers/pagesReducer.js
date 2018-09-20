@@ -1,8 +1,10 @@
+var hash = window.location.hash.split('/')[1];
+
 var defaultState = {
-      home: true,
-      skills: false,
-      projects: false,
-      about: false
+      home: hash === "home" || (hash && hash.length == 0 ? true : false),
+      skills: hash === "skills" ? true : false,
+      projects: hash === "projects" ? true : false,
+      about: hash === "about" ? true : false
 };
 
 function PagesReducer(state = defaultState, action) {

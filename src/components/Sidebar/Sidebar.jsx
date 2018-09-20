@@ -7,7 +7,7 @@ const appBarStyle = {
    height: "100%",
    width: "64px",
    flexDirection: "column",
-   marginRight: "10px",
+   // marginRight: "10px",
    paddingRight: "0px !important",
    paddingLeft: "0px !important"
 };

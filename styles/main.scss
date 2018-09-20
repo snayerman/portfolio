@@ -25,6 +25,7 @@ body {
 
    .sideBarContainer {
       display: flex;
+      z-index: 0;
 
       .AppBar {
          // height: 100% !important;
@@ -48,4 +49,31 @@ body {
          }
       }
    }
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   background-color: #181818;
+   max-height: 80px;
+   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px;
+   z-index: 1;
+
+   .headerName {
+      display: flex;
+      font-size: 1em;
+      justify-content: center;
+   }
+
+   p {
+      display: flex;
+      font-size: 0.4em;
+      justify-content: center;
+   }
+}
+
+.pageContainer {
+   flex: 1;
+   flex-direction: column;
+   display: flex;
 }

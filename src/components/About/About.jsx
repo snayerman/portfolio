@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header.jsx';
 
 export default class About extends Component {
    constructor(props) {
@@ -11,9 +12,13 @@ export default class About extends Component {
       let className = !this.props.pages.about ? "AboutContainer flyOut" : "AboutContainer";
       
       return (
-         <div className="noOverflow">
-            <div className={className}>
-               ABOUT
+         <div className="pageContainer">
+            <Header />
+
+            <div className="noOverflow">
+               <div className={className}>
+                  ABOUT
+               </div>
             </div>
          </div>
       );

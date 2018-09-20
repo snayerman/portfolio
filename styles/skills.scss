@@ -1,0 +1,21 @@
+.skillsContainer {
+   margin: 30px 10px 10px 10px;
+   color:#365470;
+
+   .skillsText {
+      z-index: inherit;
+   }
+}
+
+.skillCards {
+   display: flex;
+   /* flex-direction: column; */
+   flex: 4;
+   justify-content: center;
+
+   .Card {
+      padding: 10px;
+      flex: 1;
+      overflow: hidden;
+   }
+}
